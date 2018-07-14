@@ -19,7 +19,7 @@ My personal portfolio website
   ```
 * In your terminal, navigate to the root directory
   ```
-  cd contractor-proposal-generator
+  cd react-od.com
   ```
 * Install dependencies
   ```
