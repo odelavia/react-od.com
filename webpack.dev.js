@@ -17,6 +17,7 @@ module.exports = merge(common, {
   ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
+    // historyApiFallback: true,
     contentBase: './src',
     hot: true,
   },
