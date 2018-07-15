@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  min-width: 375px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5em;
+  /* color: #040D14; */
+  font-size: 14px;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-color: #eee;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #21ce99;
+  transition: all 350ms cubic-bezier(0.285, 0.105, 0.465, 1.015);
+  // font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #e24b6c;
+  cursor: pointer;
+}
+a svg {
+  position: relative;
+  top: -0.5px;
+  left: 0;
+  width: 10px;
+  display: inline-block;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1px;
+  transition: all 350ms cubic-bezier(0.285, 0.105, 0.465, 1.015);
+}
+a:hover svg {
+  left: 5px;
+  stroke: #f75930;
+}
+a:hover, a:active, a:focus {
+  outline: 0 none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: -0.75px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+  p.intro {
+    font-size: 20px;
+  }
+  p.label {
+    font-size: 10px;
+  }
+  a svg {
+    width: 8px;
+  }
+  a:hover svg {
+    left: 0;
+    stroke: #fff;
+  }
+}
