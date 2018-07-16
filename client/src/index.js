@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from "react-redux";
 import { AppContainer } from 'react-hot-loader';
-import { BrowserRouter } from 'react-router-dom';
 // import App from './components/App';
 import AppRoutes from './routing/AppRoutes';
+import store from './store/store'
 import './styles/main.scss';
 
 ReactDOM.render(
   <AppContainer>
+    <Provider store={store}>
       <AppRoutes />
+    </Provider>
   </AppContainer>,
   document.getElementById('root'),
 );
@@ -18,7 +21,9 @@ if (module.hot) {
   module.hot.accept('./routing/AppRoutes', () => {
     ReactDOM.render(
       <AppContainer>
+        <Provider store={store}>
           <AppRoutes />
+        </Provider>
       </AppContainer>,
       document.getElementById('root'),
     );

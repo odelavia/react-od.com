@@ -6,7 +6,7 @@ import About from '../components/About';
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Blog from '../components/Blog'
-import Contact from '../components/Contact'
+import Contact from '../components/contact/Contact'
 import Footer from '../components/layout/Footer'
 
 const AppRoutes = () => (

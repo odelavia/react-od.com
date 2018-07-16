@@ -50,6 +50,8 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: none;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
 }
 
 hr {
@@ -116,6 +118,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  padding: 0;
 }
 
 button,

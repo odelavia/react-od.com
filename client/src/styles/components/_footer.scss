@@ -48,10 +48,102 @@ footer .container {
 @media (max-width: 1900px) {}
 @media (max-width: 1440px) {}
 @media (max-width: 1280px) {}
+@media (max-width: 1025px) {
+  footer { ////////////////////////////////////
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "studio"
+        "about"
+        "blog"
+        "copy"
+        ;
+      // margin: 50px auto;
+      justify-items: center;
+      // padding: auto 0;
+
+      .pull-left {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+
+      }
+      .pull-right {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-self: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media (max-width: 990px) {}
 @media (max-width: 830px) {}
 @media (max-width: 768px) {}
 @media (max-width: 660px) {}
 @media (max-width: 576px) {}
+@media (max-width: 510px) {
+
+  .pull-left {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  .pull-right {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    justify-content: center;
+  }
+}
 @media (max-width: 425px) {}
 @media (max-width: 375px) {}
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+  footer {
+    width: 320px;
+  }
+}
+
+
+// .pull-left {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-areas:
+//     "sig"
+//     "f-about"
+//     "f-blog";
+//   padding: 0;
+//   margin: 0;
+//   justify-content: center;
+//   .sig {
+//     grid-area: sig;
+//   }
+//   .footer-aboutlink {
+//     grid-area: f-about;
+//   }
+//   .footer-bloglink {
+//     grid-area: f-blog;
+//   }
+// }
+// .pull-right {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-areas:
+//     "footer-copy"
+//     "devsig";
+//   padding: 0;
+//   margin: 0;
+//   justify-self: center;
+//   justify-content: center;
+
+//   .footer-copy {
+//     grid-area: footer-copy;
+//   }
+//   .devsig {
+//     grid-area: devsig;
+//   }
+// }
