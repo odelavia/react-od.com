@@ -19,11 +19,7 @@ const Footer = () => (
         <div className="footer-copy">
           &copy; 2018, made with  <i className="material-icons">love</i>
         </div>
-        <div className="devsig">
-          by <a href="https://www.oliverdelaviadev.com" target="_blank">
-            De La Via Studio
-          </a> for a better web.
-        </div>
+        for a better web.
       </div>
     </div>
   </footer>
