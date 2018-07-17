@@ -23,11 +23,11 @@ const WizardFormThirdPage = props => {
           <Field name="message" component="textarea" placeholder="Message..." />
         </div>
       </div>
-      <div>
-        <button type="button" className="previous" onClick={previousPage}>
+      <div className="form-buttons">
+        <button type="button" className="previous solid-button" onClick={previousPage}>
           Previous
         </button>
-        <button type="submit" disabled={pristine || submitting}>Submit</button>
+        <button type="submit" className="submit solid-button" disabled={pristine || submitting}>Submit</button>
       </div>
     </form>
   );

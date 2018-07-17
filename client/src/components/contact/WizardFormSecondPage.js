@@ -11,11 +11,11 @@ const WizardFormSecondPage = props => {
   return (
     <form onSubmit={handleSubmit}>
       <Field name="email" type="email" component={RenderField} label="Email" />
-      <div>
-        <button type="button" className="previous" onClick={previousPage}>
+      <div className="form-buttons">
+        <button type="button" className="previous solid-button" onClick={previousPage}>
           Previous
         </button>
-        <button type="submit" className="next">Next</button>
+        <button type="submit" className="next solid-button">Next</button>
       </div>
     </form>
   );

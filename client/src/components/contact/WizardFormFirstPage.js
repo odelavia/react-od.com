@@ -19,8 +19,8 @@ const WizardFormFirstPage = props => {
         component={renderField}
         label="Last Name"
       />
-      <div>
-        <button type="submit" className="next">Next</button>
+      <div className="form-buttons">
+        <button type="submit" className="next solid-button">Next</button>
       </div>
     </form>
   );

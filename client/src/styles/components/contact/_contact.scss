@@ -4,6 +4,7 @@
   background-color: #21ce99;
   padding-top: 50px;
   padding-bottom: 100px;
+  width: 100vw;
 
   .container{
     display: flex;
@@ -19,13 +20,36 @@
 }
 .contact-section .title,
 .contact-section .description {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  // text-align: center;
   width: 100%;
   color: #040D14;
 }
 .contact-section .description {
   font-size: 18px;
+  font-weight: 400;
   margin-bottom: 50px;
+}
+.form-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "prev . next";
+  justify-content: space-between;
+}
+label {
+  font-weight: 400;
+}
+button.previous {
+  grid-area: prev;
+  left: 0;
+}
+button.next,
+button.submit {
+  grid-area: next;
+  right: 0;
 }
 .form_wrapper{
   min-width: 300px;
@@ -60,18 +84,12 @@ input{
 input[type="text"], input[type="email"], textarea {
   outline: none;
   border: none;
-  /* background-color: lightgrey; */
   padding: 5px 45px 5px 5px!important;
-  /* text-align: center; */
   transition: all 250ms;
   padding: 15px;
   border: 1px solid #21ce99;
   border-radius: 0px;
   margin-bottom: 10px;
-  /* width: 100%; */
-  /* box-sizing: border-box; */
-  /* font-family: montserrat; */
-  /* color: #2C3E50; */
   font-size: 13px;
 }
 input:focus, textarea:focus {
@@ -285,11 +303,29 @@ input[type="button"]:hover, input[type="submit"]:hover{
     max-width: 425px;
 
     .container .row {
+      width: calc(100vw);
       margin: 50px 0 50px 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    // .row {
-    //   margin: 0;
-    // }
+
+    .description {
+      max-width: calc(100% - 40px);
+    }
+
+    form .renderfield {
+      display: flex;
+      flex-direction: column;
+      // align-content: center;
+      align-items: flex-start;
+
+      label {
+        display: flex;
+        justify-self: flex-start;
+      }
+    }
+
     .input-container {
       display: flex;
       justify-content: center;
@@ -298,6 +334,31 @@ input[type="button"]:hover, input[type="submit"]:hover{
     input[type="text"], input[type="email"], textarea {
       padding:5px 0;
       max-width: 375px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    .form-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "prev . next";
+      width: 200px;
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: center;
+      justify-self: center;
+    }
+    button.previous {
+      grid-area: prev;
+      left: 0;
+    }
+    button.next,
+    button.submit {
+      grid-area: next;
+      right: 0;
     }
   }
 }
@@ -309,7 +370,6 @@ input[type="button"]:hover, input[type="submit"]:hover{
       max-width: 280px;
     }
   }
-
   // .input-container {
   //   display: flex;
   //   justify-content: center;
