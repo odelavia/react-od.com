@@ -80,6 +80,8 @@ a:hover, a:active, a:focus {
 img {
   width: 100%;
   display: block;
+  max-width: 100%;
+  border-radius: 1px;
 }
 .section {
   padding: 0;
@@ -122,9 +124,9 @@ img {
 
 @media (min-width: 2400px) {}
 @media (max-width: 2560px) {
-  .container {
-    max-width: 1280px
-  }
+  // .container {
+  //   max-width: 1280px
+  // }
 }
 @media (max-width: 2400px) {}
 @media (max-width: 1900px) {}
