@@ -100,7 +100,7 @@ nav .navbar-toggler .navbar-toggler-icon {
 } */
 .navbar-collapse {
   display: grid;
-  grid-template-columns: 2fr repeat(4, auto-fit);
+  grid-template-columns: 2fr repeat(4, auto);
   grid-template-areas:
   ". about projects blog contact";
   align-items: center;
@@ -112,7 +112,7 @@ nav .navbar-toggler .navbar-toggler-icon {
   margin-top: 0;
 }
 .nav-item {
-  display: flex;
+  display: block;  //was flex
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -291,6 +291,13 @@ Link.nav-link:not(.btn) {
     animation: null;
   }
 }
+
+@media(min-width: 991px) {
+  .showWhenOfSize {
+    display: block !important;
+  }
+}
+
 @media (max-width: 990px) {
   .navbar-translate {
     display: flex;

@@ -6,7 +6,7 @@ module.exports = {
   entry: { main: './client/src/index.js' },
   output: {
     path: path.join(__dirname, './client/dist'),
-    publicPath: '',
+    publicPath: '/',
     filename: '[name].[hash].js',
   },
   module: {
@@ -16,7 +16,22 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name]-[hash:8].[ext]',
+                    publicPath: 'assets/images/'
+                },
+            },
+        ]
+      },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin('dist', {}),
