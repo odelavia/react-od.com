@@ -112,11 +112,28 @@ nav .navbar-toggler .navbar-toggler-icon {
   margin-top: 0;
 }
 .nav-item {
-  display: block;  //was flex
+  display: inline-block;  //was flex
+  position: relative;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 0 30px;
+
+  &:hover:before {
+    width: 60%;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -5%;
+    height: 110%;
+    background: $robinhood-green;
+    width: 0;
+    transition: all 350ms cubic-bezier(0.285, 0.105, 0.465, 1.015);
+  }
 }
 .nav-item.about {
   grid-area: about;
@@ -350,6 +367,18 @@ Link.nav-link:not(.btn) {
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+
+    .nav-item {
+      display: block;
+      margin-bottom: 20px;
+
+      &:before {
+        background: $off-white;
+      }
+      &:hover:before {
+        width: 17%;
+      }
+    }
   }
   .nav-open .navbar-collapse {
     transform: translate3d(0px, 0, 0);
