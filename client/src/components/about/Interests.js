@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => (
+const Interests = () => (
   <div className="body-text-container">
     <code className="line-1-text">
       <span className="html-keyword">import</span>
@@ -14,7 +14,7 @@ const About = () => (
       <span className="html-keyword">
         const
         <span className="html-method pad-space">
-          About
+          Interests
         </span>
         <span className="pad-space">
         =
@@ -26,13 +26,11 @@ const About = () => (
     </code>
       <article className="pad1 line-5-text html-tag">&lt;<span className="html-element">article</span>&gt;</article>
         <div className="pad2 line-6-text html-tag">&lt;<span className="html-element">p</span>&gt;</div>
-          <code className="pad3 line-7-text">Hi, I'm Oliver!</code>
+          <code className="pad3 line-7-text">My interests are:</code>
         <div className="line-8-text html-tag pad2">&lt;/<span className="html-element">p</span>&gt;</div>
         <div className="line-9-text html-tag pad2">&lt;<span className="html-element">p</span>&gt;</div>
           <code className="pad3 line-10-text">
-            I'm passionate about designing solutions and solving problems.
-            <br/> Coming from a strong visual arts background has allowed me to leverage my attention to detail and creativity.
-            <br/> Whether it be figuring out how to make a more intuitive user interface, writing crucial logic for your server or planning out a long-period savatical on a budget, I love thinking outside the box.
+            I love art, travel and powerlifting.
           </code>
         <div className="line-11-text html-tag pad2">&lt;/<span className="html-element">p</span>&gt;</div>
       <article className="line-12-text html-tag pad1">&lt;/<span className="html-element">article</span>&gt;</article>
@@ -40,9 +38,9 @@ const About = () => (
 
     <code className="line-9-text">
       <span className="html-keyword pad-space">export default</span>
-      About
+      Interests
     </code>
   </div>
 );
 
-export default About;
+export default Interests;
