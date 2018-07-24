@@ -38,7 +38,6 @@ class NavBar extends Component {
   };
 
   onScrollColorChange() {
-    // console.log (event)
     let lastScrollY = window.scrollY
     console.log (lastScrollY)
     if (this.state.scrolledDown == false ) {
@@ -46,7 +45,6 @@ class NavBar extends Component {
         this.setState ({
           scrolledDown: true,
         })
-        console.log(this.state, 'should be changed')
       }
       return
     } else if (this.state.scrolledDown == true ) {
@@ -54,34 +52,16 @@ class NavBar extends Component {
         this.setState ({
           scrolledDown: false,
         })
-        console.log(this.state, 'initial')
       }
       return
     }
-    // let scrollTop = event.srcElement.body.scrollTop,
-    // itemTranslate = Math.min(0, scrollTop/3 - 60);
-
-    // this.setState({
-    //   transform: itemTranslate
-    // });
-
-    // if(document.scrollIcon)
   }
-
-  // window.onscroll = function(ev) {
-  //   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-  //       alert("you're at the bottom of the page");
-  //   }
-  // };
 
   render() {
     return (
-      <nav ref={(ref) => this.scrollIcon = ref}
+      <nav id="sectionsNav"
         className={this.state.scrolledDown ? 'navbar-color-on-scroll' : 'navbar-transparent'}
-        color-on-scroll="100"
-        id="sectionsNav"
         onScroll={this.onScrollColorChange}
-
       >
         <div className="navbar-container">
           <div className="navbar-translate">
