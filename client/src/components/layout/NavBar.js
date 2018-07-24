@@ -11,11 +11,19 @@ class NavBar extends Component {
     this.state = {
       linkClicked: false,
       right: 300,
+      scrolledDown: false,
     }
     this.openNav = this.openNav.bind(this)
     this.resetMobileNav = this.resetMobileNav.bind(this)
+    this.onScrollColorChange = this.onScrollColorChange.bind(this)
   }
 
+  componentDidMount(){
+    window.addEventListener('scroll', this.onScrollColorChange)
+  }
+  componentWillUnmount(){
+    window.addEventListener('scroll', this.onScrollColorChange)
+  }
 
   openNav() {
     if (this.props.navOpen == true) {
@@ -29,9 +37,52 @@ class NavBar extends Component {
     navOpen ? (!this.state.linkClicked ? this.setState({linkClicked: true}) : null) : null
   };
 
+  onScrollColorChange() {
+    // console.log (event)
+    let lastScrollY = window.scrollY
+    console.log (lastScrollY)
+    if (this.state.scrolledDown == false ) {
+      if (lastScrollY > 100 ) {
+        this.setState ({
+          scrolledDown: true,
+        })
+        console.log(this.state, 'should be changed')
+      }
+      return
+    } else if (this.state.scrolledDown == true ) {
+      if (lastScrollY <= 100 ) {
+        this.setState ({
+          scrolledDown: false,
+        })
+        console.log(this.state, 'initial')
+      }
+      return
+    }
+    // let scrollTop = event.srcElement.body.scrollTop,
+    // itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+    // this.setState({
+    //   transform: itemTranslate
+    // });
+
+    // if(document.scrollIcon)
+  }
+
+  // window.onscroll = function(ev) {
+  //   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+  //       alert("you're at the bottom of the page");
+  //   }
+  // };
+
   render() {
     return (
-      <nav className="navbar-color-on-scroll navbar-transparent" color-on-scroll="100" id="sectionsNav">
+      <nav ref={(ref) => this.scrollIcon = ref}
+        className={this.state.scrolledDown ? 'navbar-color-on-scroll' : 'navbar-transparent'}
+        color-on-scroll="100"
+        id="sectionsNav"
+        onScroll={this.onScrollColorChange}
+
+      >
         <div className="navbar-container">
           <div className="navbar-translate">
             <NavLink className="navbar-brand" to="/" onClick={() => this.resetMobileNav}>DE LA VIA</NavLink>
