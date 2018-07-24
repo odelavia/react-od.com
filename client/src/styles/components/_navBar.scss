@@ -102,7 +102,7 @@ nav .navbar-toggler .navbar-toggler-icon {
   display: grid;
   grid-template-columns: 2fr repeat(4, auto);
   grid-template-areas:
-  ". about projects blog contact";
+  ". projects blog contact";
   align-items: center;
   /* flex-direction: row; */
   /* margin-left: auto!important; */
@@ -134,9 +134,6 @@ nav .navbar-toggler .navbar-toggler-icon {
     width: 0;
     transition: all 350ms cubic-bezier(0.285, 0.105, 0.465, 1.015);
   }
-}
-.nav-item.about {
-  grid-area: about;
 }
 .nav-link {
   /* display: block; */

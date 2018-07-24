@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import NavBar from '../components/layout/NavBar';
 import Home from '../components/Home';
-import About from '../components/About';
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Blog from '../components/Blog'
@@ -14,7 +13,6 @@ const AppRoutes = () => (
     <div>
       <NavBar />
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
       <Route path="/skills" component={Skills} />
       <Route path="/projects" component={Projects} />
       <Route path="/blog" component={Blog} />

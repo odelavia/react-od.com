@@ -44,8 +44,7 @@ class NavBar extends Component {
           <div className='outsideAlert'>
           <OutsideAlerter >
             <ul className="navbar-collapse" style={{right: this.state.right}}>
-              <NavLink className="nav-item" to="" onClick={this.resetMobileNav}>Home</NavLink>
-              <NavLink className="nav-item about" to="/about" onClick={this.resetMobileNav}>About</NavLink>
+              <NavLink id="home" className="nav-item" to="/" onClick={this.resetMobileNav}>Home</NavLink>
               <li className="dropdown">
                 <NavLink className="nav-item dropdown-toggle" to="/projects" data-toggle="dropdown" onClick={this.resetMobileNav}>Projects</NavLink>
                 <div className="dropdown-menu dropdown-with-icons">
