@@ -95,9 +95,9 @@ class AboutContainer extends Component {
           <hr />
 
           <p>
-            Oliver De La Via is a softaware developr with strong roots in residential/commercial painting and oil portraiture. He's traveled all over the US, South America, Europe and parts of Africa by foot, bicycle, and car. He informs his work with his observations across all industries be it tech, art, retail, food, etc in an effort to keep software UI accessible, responsive and intuitive.
+            Oliver De La Via is a software developer with strong roots in residential/commercial painting, carpentry and oil portraiture. He's traveled all over the US, South America, Europe and parts of Africa by foot, bicycle, and car. He informs his work with his observations across all industries be it tech, art, retail, food, etc in an effort to keep software UI accessible, responsive and intuitive.
           </p>
-          <p>Click on the mock text editor's tabs on the right to learn more</p>
+          <p>Click on the mock text editor's file tabs to learn more</p>
         </section>
         <section className="about-editor-wrapper">
           <div className="editor-container">
