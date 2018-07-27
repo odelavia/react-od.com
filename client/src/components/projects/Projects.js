@@ -15,23 +15,23 @@ const Projects = () => (
       </div>
       <div className="test-project">
         <div className="project-description">TEST</div>
-        <img className="project-img" />
+        <div className="project-img" />
       </div>
       <div className="test-project">
         <div className="project-description">TEST</div>
-        <img className="project-img" />
+        <div className="project-img" />
       </div>
       <div className="test-project">
         <div className="project-description">TEST</div>
-        <img className="project-img" />
+        <div className="project-img" />
       </div>
       <div className="test-project">
         <div className="project-description">TEST</div>
-        <img className="project-img" />
+        <div className="project-img" />
       </div>
       <div className="test-project">
         <div className="project-description">TEST</div>
-        <img className="project-img" />
+        <div className="project-img" />
       </div>
     </div>
   </div>
